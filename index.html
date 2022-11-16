@@ -4,7 +4,7 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Document</title>
+        <title>Vue Email List</title>
         <!-- script vuejs -->
         <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
         <!-- script axios -->
@@ -12,7 +12,13 @@
         <link rel="stylesheet" href="css/style.css">
     </head>
     <body>
-        <div id="app">{{ message }}</div>
+        <div id="app" class="container">
+            <ul v-if="mails.length >= 10">
+                <li v-for="mail in mails">
+                    {{mail}}
+                </li>
+            </ul>
+        </div>
         
         <script src="js/main.js"></script>
     </body>
